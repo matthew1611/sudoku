@@ -39,4 +39,15 @@ function setGame() {
     number.classList.add('number');
     document.getElementById('digits').appendChild(number);
   }
+
+  //Board 9x9
+  for (let i = 0; i < 9; i++) {
+    for (let c = 0; c < 9; c++) {
+      let tile = document.createElement('div');
+      tile.id = i.toString() + '-' + c.toString();
+
+      tile.classList.add('tile');
+      document.getElementById('board').appendChild(tile);
+    }
+  }
 }
