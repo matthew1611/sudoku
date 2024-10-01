@@ -41,7 +41,7 @@ hr {
     flex-wrap: wrap;
 
     margin: 0 auto;
-    background-color: yellow;
+
 }
 
 .number {
@@ -56,4 +56,8 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.number-selected {
+background-color: gray;
 }
