@@ -46,9 +46,15 @@ function setGame() {
     for (let c = 0; c < 9; c++) {
       let tile = document.createElement('div');
       tile.id = i.toString() + '-' + c.toString();
-      tile.innerText = board[i][c];
-      if (board[i][c] === '-') {
-        tile.innerText = '';
+      if (board[i][c] != '-') {
+        tile.innerText = board[i][c];
+        tile.classList.add('tile-start');
+      }
+      if (i == 2 || i == 5) {
+        tile.classList.add('horizontal-line');
+      }
+      if (c == 2 || c == 5) {
+        tile.classList.add('vertical-line');
       }
       tile.addEventListener('click', selectTile);
       tile.classList.add('tile');
